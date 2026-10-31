@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8dce8">
+<title>A Letter For Tata ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+:root{--pink:#f7dce7;--rose:#c66b8d;--deep:#84445f;--paper:#fffafc;--ink:#684354}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:'DM Sans',sans-serif;color:var(--ink);background:radial-gradient(circle at top,#fff8fb 0,#f9e4ed 48%,#f4d5e2 100%);overflow-x:hidden}
+.wrap{width:min(92%,520px);margin:0 auto;padding:34px 0 48px;position:relative;z-index:1}
+.hero{text-align:center;margin:12px 0 26px}
+.kicker{letter-spacing:3px;text-transform:uppercase;font-size:10px;color:#b36c88}
+h1,h2,.serif{font-family:'Playfair Display',serif}
+h1{font-size:clamp(34px,9vw,48px);font-weight:500;line-height:1.1;margin:12px 0;color:var(--deep)}
+.hero p{font-size:13px;color:#a36b81}
+.card{background:rgba(255,250,252,.88);border:1px solid rgba(255,255,255,.9);border-radius:26px;padding:24px;box-shadow:0 18px 50px rgba(157,91,119,.13);backdrop-filter:blur(8px)}
+.envelope-area{display:grid;place-items:center;padding:18px 0 12px}
+.envelope{width:220px;height:145px;position:relative;border:0;background:transparent;cursor:pointer;filter:drop-shadow(0 12px 12px rgba(155,84,114,.18));transition:transform .25s}
+.envelope:hover{transform:translateY(-4px)}
+.env-back{position:absolute;inset:0;background:#e9a9c2;border-radius:8px}
+.env-letter{position:absolute;width:82%;height:82%;left:9%;top:4%;background:#fff9fc;border-radius:5px;transition:transform .65s;display:grid;place-items:center;color:#b65d80;font-family:'Playfair Display',serif;font-style:italic;font-size:18px}
+.env-front{position:absolute;inset:0;background:linear-gradient(145deg,#f4c6d7,#e9a6c0);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-radius:8px}
+.env-flap{position:absolute;inset:0;background:#f8d7e4;clip-path:polygon(0 0,100% 0,50% 61%);transform-origin:top;transition:transform .55s;z-index:2}
+.envelope.open .env-flap{transform:rotateX(180deg);z-index:0}
+.envelope.open .env-letter{transform:translateY(-65px);transition-delay:.25s}
+.hint{text-align:center;font-size:12px;color:#aa7188;margin:8px 0 0}
+.letter{display:none;margin-top:18px;animation:rise .8s ease both}
+.letter.show{display:block}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.letter h2{text-align:center;font-weight:500;color:var(--deep);font-size:28px;margin:4px 0 20px}
+.letter p{font-size:14px;line-height:1.9;margin:0 0 14px}
+.salute{font-family:'Playfair Display',serif;font-style:italic;color:#a85c7c}
+.sign{text-align:right;margin-top:24px!important;font-family:'Playfair Display',serif;font-style:italic;color:#a85c7c;font-size:19px!important}
+.heartline{text-align:center;color:#d58ba7;font-size:22px;letter-spacing:8px;margin:18px 0}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+button.action{border:0;border-radius:999px;padding:12px 17px;background:#c66b8d;color:white;font:600 12px 'DM Sans';cursor:pointer;box-shadow:0 7px 18px #d9a4b8}
+button.secondary{background:#fff0f6;color:#a35475;border:1px solid #f0cada;box-shadow:none}
+.footer{text-align:center;font-size:11px;color:#ae8194;margin-top:24px}
+.float{position:fixed;pointer-events:none;bottom:-30px;opacity:.65;animation:floatUp linear forwards;z-index:0}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+.music-note{font-size:11px;text-align:center;color:#a8798d;margin-top:14px;line-height:1.6}
+#musicBtn{margin-top:8px}
+@media(max-width:380px){.card{padding:19px}.envelope{transform:scale(.9)}.envelope:hover{transform:scale(.9) translateY(-4px)}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div class="kicker">a little something from my heart</div>
+    <h1>A Letter For<br><i>My Favorite Girl</i></h1>
+    <p>Made with love, especially for Tata ♡</p>
+  </header>
+
+  <section class="card">
+    <div class="envelope-area">
+      <button class="envelope" id="envelope" aria-label="Buka surat untuk Tata">
+        <div class="env-back"></div>
+        <div class="env-letter">For Tata ♡</div>
+        <div class="env-front"></div>
+        <div class="env-flap"></div>
+      </button>
+    </div>
+    <p class="hint" id="hint">Ketuk amplopnya untuk membuka surat, sayang ♡</p>
+
+    <article class="letter" id="letter">
+      <div class="heartline">♡　♡　♡</div>
+      <h2>Untuk Yunita Altovunissa</h2>
+      <p class="salute">My pretty girl, Tata...</p>
+      <p>Aku mau minta maaf, sayang. Aku sadar mungkin ada perkataan atau sikapku yang membuat kamu kecewa, sedih, atau merasa tidak dimengerti. Aku ga mau mencari alasan untuk kesalahanku. Aku ingin belajar memahami kamu dengan lebih baik.</p>
+      <p>Kamu adalah seseorang yang sangat berharga buat aku. Aku ga mau egoku lebih besar daripada rasa sayangku ke kamu. Aku ingin lebih berhati-hati dalam berkata, lebih banyak mendengarkan, dan lebih menjaga perasaan kamu.</p>
+      <p>Aku tahu kata maaf saja ga selalu cukup. Jadi aku ingin membuktikannya lewat sikap dan perubahan kecil yang konsisten, bukan cuma janji.</p>
+      <p>Aku ga maksa kamu untuk langsung baik-baik saja atau langsung maafin aku. Take ur time sayangg. Perasaan kamu penting buat aku.</p>
+      <p>Aku sayang bangett sama kamuu TATAAAKUUU ❤️
+      <p>Terima kasih sudah hadir di hidup aku dan membuat banyak hari terasa lebih indah. Aku masih ingin belajar, tumbuh, tertawa, dan menciptakan banyak kenangan baik bersama kamu.</p>
+      <div class="heartline">♡　♡　♡</div>
+      <h2 style="font-size:25px">I love you, Tata.</h2>
+      <p style="text-align:center;font-family:'Playfair Display',serif;font-style:italic">You are, and will always be, someone very special to me.</p>
+      <p class="sign">With all my love,<br>Desta Kesuma ♡</p>
+      <div class="actions">
+        <button class="action" id="hugBtn">Kirim peluk virtual ♡</button>
+        <button class="action secondary" id="againBtn">Baca lagi</button>
+      </div>
+    </article>
+  </section>
+
+  <p class="footer">A small letter, with a very big love. ♡</p>
+</main>
+
+<script>
+const envelope=document.getElementById('envelope');
+const letter=document.getElementById('letter');
+const hint=document.getElementById('hint');
+envelope.addEventListener('click',()=>{
+  envelope.classList.add('open');
+  hint.textContent='Untuk kamu, dari aku. ♡';
+  setTimeout(()=>{
+    letter.classList.add('show');
+    document.querySelector('.envelope-area').style.display='none';
+    hint.style.display='none';
+    letter.scrollIntoView({behavior:'smooth',block:'start'});
+  },650);
+});
+function floatHeart(){
+  const el=document.createElement('div');
+  el.className='float';
+  el.textContent=Math.random()>.45?'♡':'♥';
+  el.style.left=Math.random()*100+'vw';
+  el.style.fontSize=(14+Math.random()*18)+'px';
+  el.style.color=['#d987a8','#c66b8d','#e7a8c0'][Math.floor(Math.random()*3)];
+  el.style.animationDuration=(7+Math.random()*6)+'s';
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),14000);
+}
+setInterval(floatHeart,850);
+document.getElementById('hugBtn').addEventListener('click',()=>{
+  alert('Satu peluk paling hangat dari Desta untuk Tata. Semoga kamu merasa disayang, ya. ♡');
+});
+document.getElementById('againBtn').addEventListener('click',()=>{
+  letter.scrollIntoView({behavior:'smooth',block:'start'});
+});
+</script>
+</body>
+</html>
